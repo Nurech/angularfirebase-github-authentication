@@ -2,6 +2,7 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on Push
+
 on:
   push:
     branches:
@@ -9,20 +10,16 @@ on:
       - release/*
 
 jobs:
-  firebase-deploy:
-
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
-        with:
-          node-version: '10.x'
+      - uses: actions/checkout@v2
       - run: npm ci
-      - run: npm install
+      - run: npm iinstall && npm run build
       - run: npm run build
-      - uses: w9jds/firebase-action@master
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_GITHUB_AUTHENTICATION_75A59 }}'
+          projectId: github-authentication-75a59
+          channelId: live

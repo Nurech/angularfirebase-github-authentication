@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/angularfiebase-authentication",
     "ignore": [
       "firebase.json",
       "**/.*",
