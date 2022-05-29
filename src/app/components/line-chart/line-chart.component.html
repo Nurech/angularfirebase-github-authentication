@@ -1,0 +1,4 @@
+<ng-container *ngIf="chartOption">
+  <h3>Registered users</h3>
+  <div echarts [options]="chartOption" [initOpts]="{renderer: 'svg'}" style="max-height: 175px"></div>
+</ng-container>

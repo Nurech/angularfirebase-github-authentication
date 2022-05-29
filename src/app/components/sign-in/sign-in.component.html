@@ -1,6 +1,11 @@
 <div class="displayTable">
   <div class="displayTableCell">
     <div class="authBlock">
+
+      <div>
+        <app-line-chart></app-line-chart>
+      </div>
+
       <h3>Sign In</h3>
       <div class="formGroup">
         <input
@@ -45,6 +50,18 @@
         >
           <i class="fab fa-google-plus-g"></i>
           Log in with Google
+        </button>
+      </div>
+
+      <!-- Calling GitHub auth Api from AuthService -->
+      <div class="formGroup">
+        <button
+          type="button"
+          class="btn githubBtn"
+          (click)="authService.GithubAuth()"
+        >
+          <i class="fab fa-github"></i>
+          Log in with GitHub
         </button>
       </div>
 
