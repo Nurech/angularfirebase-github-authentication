@@ -3,7 +3,9 @@
 Learn to create full Firebase authentication system with Angular using AngularFire2 library.
 
 ## Written Article
-[Adding login/signup authentication to your web application using GitHub GraphQL and Firebase](https://medium.com/p/8a0f192458f8)
+[Adding login/signup authentication to your Angular 13 + Firebase + GitHub web application](https://medium.com/p/8a0f192458f8)
+
+Demo app: https://github-authentication-75a59.web.app/
 
 
 - ⭐ Sign in with GitHub
