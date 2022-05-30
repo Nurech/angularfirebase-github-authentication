@@ -51,7 +51,7 @@ export class LineChartComponent implements OnInit {
         boundaryGap: false,
         splitLine: {
           show: false
-        },
+        }
       },
       yAxis: {
         type: 'value',
@@ -62,9 +62,17 @@ export class LineChartComponent implements OnInit {
       },
       series: [
         {
+          type: 'bar',
           data: this.chartData,
-          type: 'line',
-          areaStyle: {}
+          roundCap: true,
+          itemStyle: {
+            borderRadius: [50, 50, 0, 0], // Specify the border radius
+            borderType: 'solid',
+            color: '#1a1a1a',
+            borderColor: '#73c0de',
+            shadowColor: '#5470c6',
+            shadowBlur: 2
+          }
         }
       ]
     };
